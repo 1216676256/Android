@@ -1,0 +1,32 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:visible="false"
+            android:id="@+id/nav_call"
+            android:icon="@drawable/ic_menu"
+            android:title="Call"/>
+        <item
+            android:visible="false"
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/ic_menu"
+            android:title="Friends"/>
+        <item
+            android:id="@+id/nav_modify"
+            android:icon="@drawable/ic_menu"
+            android:title="修改个人个人信息"/>
+        <item
+            android:id="@+id/nav_set"
+            android:icon="@drawable/ic_menu"
+            android:title="设置"/>
+        <item
+            android:id="@+id/nav_add"
+            android:icon="@drawable/ic_menu"
+            android:title="创建新账号"/>
+        <item
+            android:title="退出当前账号"
+            android:id="@+id/nav_quit"
+            android:icon="@mipmap/ic_launcher"/>
+    </group>
+</menu>

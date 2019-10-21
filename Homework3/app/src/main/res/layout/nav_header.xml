@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:padding="10dp"
+    android:background="@drawable/scenery_1"
+    android:id="@+id/back_bg">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:id="@+id/icon_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_menu"
+        android:layout_marginBottom="20dp" />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户:未登录"
+        android:textColor="#FFF"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="email:无"
+        android:textColor="#FFF"
+        android:textSize="15sp"/>
+</LinearLayout>

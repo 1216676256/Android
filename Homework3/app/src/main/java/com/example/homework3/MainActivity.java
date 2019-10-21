@@ -9,13 +9,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SimpleExpandableListAdapter;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
+/**
+ * @date:2019/10/20
+ * @author:zhongcz
+ */
 public class MainActivity extends ExpandableListActivity {
     private Button button = null;
 
@@ -23,7 +27,8 @@ public class MainActivity extends ExpandableListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button = (Button)findViewById(R.id.btn_turn);
+        Toast.makeText(MainActivity.this, "这是第一个页面", Toast.LENGTH_SHORT);
+        button = findViewById(R.id.btn_turn);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,7 +39,7 @@ public class MainActivity extends ExpandableListActivity {
                 build.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+                        Intent intent = new Intent(MainActivity.this, ThirdActiviry.class);
                         startActivity(intent);
                     }
                 });
@@ -48,14 +53,13 @@ public class MainActivity extends ExpandableListActivity {
                 build.show();
 
 
-
             }
         });
 
         //  定义一个List，该List对象为一级条目提供数据
         List<Map<String, String>> groups = new ArrayList<>();
         Map<String, String> group1 = new HashMap<>();
-        group1.put("group", "河南");
+        group1.put("group", "浙江");
         Map<String, String> group2 = new HashMap<>();
         group2.put("group", "山东");
         groups.add(group1);
@@ -64,11 +68,11 @@ public class MainActivity extends ExpandableListActivity {
         //  定义一个List，该List对象为第一个一级条目提供二级条目数据
         List<Map<String, String>> child1 = new ArrayList<>();
         Map<String, String> child1Data1 = new HashMap<>();
-        child1Data1.put("child", "郑州");
+        child1Data1.put("child", "温州");
         Map<String, String> child1Data2 = new HashMap<>();
-        child1Data2.put("child", "洛阳");
+        child1Data2.put("child", "宁波");
         Map<String, String> child1Data3 = new HashMap<>();
-        child1Data3.put("child", "南阳");
+        child1Data3.put("child", "杭州");
         child1.add(child1Data1);
         child1.add(child1Data2);
         child1.add(child1Data3);
