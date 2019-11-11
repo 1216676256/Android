@@ -80,10 +80,11 @@ public class MainActivity extends AppCompatActivity {
                         String author = cursor.getString(cursor.getColumnIndex("author"));
                         int pages = cursor.getInt(cursor.getColumnIndex("pages"));
                         double price = cursor.getDouble(cursor.getColumnIndex("price"));
-                        System.out.println("book name is" + name);
-                        System.out.println("book author is " + author);
-                        System.out.println("book pages is " + pages);
-                        System.out.println("book price is" + price);
+                        String res = "book name is" + name + "\n" +
+                            "book author is " + author + "\n" +
+                            "book pages is " + pages + "\n" +
+                            "book price is" + price;
+                        Toast.makeText(MainActivity.this,res,Toast.LENGTH_SHORT).show();
                     }while(cursor.moveToNext());
                 }
                 cursor.close();
